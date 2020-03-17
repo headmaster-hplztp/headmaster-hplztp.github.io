@@ -6,19 +6,24 @@ body {
 }
 
 .user {
-  
+  &__firstname, &__lastname {
+    color: lighten($txt-color, 25%);
+  }
   &__position {
-    color: rgba($txt-color, 0.5);
+    color: lighten($txt-color, 40%);
   }
   &__contacts {
     a {
-      color: rgba($txt-color, 0.5);
+      color: lighten($txt-color, 40%);
       transition: color 0.3s linear;
       
       &:hover {
-        color: rgba($txt-color, 1);
+        color: lighten($txt-color, 25%);
         transition: color 0.3s linear;
       }
+    }
+    .fas {
+      color: lighten($txt-color, 25%);
     }
   }
 }
