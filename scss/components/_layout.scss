@@ -1,0 +1,43 @@
+// LAYOUT
+
+.page {
+  
+  &-header {
+    padding: 30px 0;
+  }
+  &-footer {
+    padding: 30px 0;
+    
+    .container {
+      position: relative;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 15px;
+        right: 15px;
+        border-top: 1px solid rgba($txt-color, 0.5);
+      }
+    }
+  }
+}
+
+.user {
+  
+  &__position {
+    margin-top: 15px;
+    margin-bottom: 60px;
+  }
+  &__contacts {
+    li {
+      position: relative;
+      padding-left: 32px + 15px;
+    }
+    .fas {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}

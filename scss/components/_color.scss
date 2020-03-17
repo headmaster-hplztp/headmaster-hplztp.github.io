@@ -1,0 +1,24 @@
+// COLOR
+
+body {
+  background-color: $bg-color;
+  color: $txt-color;
+}
+
+.user {
+  
+  &__position {
+    color: rgba($txt-color, 0.5);
+  }
+  &__contacts {
+    a {
+      color: rgba($txt-color, 0.5);
+      transition: color 0.3s linear;
+      
+      &:hover {
+        color: rgba($txt-color, 1);
+        transition: color 0.3s linear;
+      }
+    }
+  }
+}
