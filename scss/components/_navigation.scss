@@ -25,11 +25,66 @@
       .fas {
         position: absolute;
         left: $gutter;
-        top: 50%;
-        transform: translateY(-50%);
+        @extend %positioning-middle;
       }
     }
   }
+  
+  @media (min-width: 992px) {
+    position: relative;
+    
+    &__list {
+      position: absolute;
+      top: 0;
+      right: $gutter;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(100vh - 70px - 85px);
+      padding: 0;
+      background-color: transparent;
+      
+      li {
+        &:not(:last-child) {
+          margin-bottom: $gutter;
+        }
+        &:first-child, &:last-child {
+          border: none;
+        }
+        label {
+          width: 3 * $gutter;
+          height: 3 * $gutter;
+          padding-left: 0;
+          border: 1px solid darken($bg-color, 10%);
+          border-bottom-color: lighten($bg-color, 10%);
+          border-right-color: lighten($bg-color, 10%);
+          border-radius: 50%;
+          line-height: 1;
+          text-align: right;
+          
+          &:hover {
+            span {
+              width: auto;
+            }
+          }
+        }
+        .fas {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 4 * $gutter;
+          width: 0;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  
 }
 
 #home-toggle:checked ~ .page-navigation label[for="home-toggle"], 
