@@ -7,23 +7,23 @@ body {
 
 .user {
   &__firstname, &__lastname {
-    color: lighten($txt-color, 25%);
+    color: lighten($txt-color, 0%);
   }
   &__position {
-    color: lighten($txt-color, 40%);
+    color: lighten($txt-color, 0%);
   }
   &__contacts {
     a {
-      color: lighten($txt-color, 40%);
+      color: lighten($txt-color, 30%);
       transition: color 0.3s linear;
       
       &:hover {
-        color: lighten($txt-color, 25%);
+        color: lighten($txt-color, 0%);
         transition: color 0.3s linear;
       }
     }
     .fas {
-      color: lighten($txt-color, 25%);
+      color: lighten($txt-color, 0%);
     }
   }
 }

@@ -1,1 +1,16 @@
 // EXTENSIONS
+
+%reset {
+  margin: 0;
+  padding: 0;
+}
+
+%positioning-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+%positioning-middle {
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -16,48 +16,75 @@
 </head>
 <body class="h-100">
   <div class="page-wrapper h-100 d-flex flex-column">
+    <!-- PAGE CONTROLS -->
+    <input id="nav-toggle" class="d-none" name="navigation-toggle" type="checkbox" checked>
+    <input id="home-toggle" class="d-none" name="section-toggle" type="radio" checked>
+    <input id="teaching-toggle" class="d-none" name="section-toggle" type="radio">
+    <input id="practice-toggle" class="d-none" name="section-toggle" type="radio">
+    <input id="internship-toggle" class="d-none" name="section-toggle" type="radio">
+    <input id="safety-toggle" class="d-none" name="section-toggle" type="radio">
+    <!-- /PAGE CONTROLS -->
     <!-- PAGE HEADER -->
     <header class="page-header">
       <div class="container">
         <div class="row align-items-center">
           <!-- BRAND -->
-          <div class="col-lg-auto">
+          <div class="col-auto">
             <div class="brand">
-              <h2 class="brand-name mb-0 text-shadow--apple">Херсонський професійний ліцей зв’язку та поліграфії</h2>
-              <p class="brand-description mb-0 text-shadow--apple">державний професійно-технічний навчальний заклад</p>
+              <h2 class="brand-name text-shadow--apple d-none d-lg-block mb-0">Херсонський професійний ліцей зв’язку та поліграфії</h2>
+              <p class="brand-description text-shadow--apple d-none d-lg-block mb-0">державний професійно-технічний навчальний заклад</p>
+              <i class="d-lg-none fas fa-school"></i>
             </div>
           </div>
           <!-- /BRAND -->
-          <!-- NAVIGATION -->
-          <input id="nav-toggle" class="d-none" name="" type="checkbox">
-          <div class="col-lg-auto ml-lg-auto">
-            <label for="nav-toggle"><span>Меню</span></label>
+          <!-- MENU CONTROL -->
+          <div class="col-auto ml-auto">
+            <label class="mb-0" for="nav-toggle"><span>Меню</span> <i class="fas fa-ellipsis-v"></i></label>
           </div>
-          <!-- /NAVIGATION -->
+          <!-- /MENU CONTROL -->
         </div>
       </div>
     </header>
     <!-- /PAGE HEADER -->
-    <!-- PAGE MAIN -->
-    <main class="page-main my-auto">
+    <!-- PAGE NAVIGATION -->
+    <nav class="page-navigation">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-3 offset-lg-1 shadow--3d">
-            <img class="img-fluid" src="img/my-photo.jpg" alt="фото Котеленець Володимир Анатолійович">
-          </div>
-          <div class="user col-lg-6 offset-lg-1">
-            <h1 class="mb-0">
-              <span class="user__lastname d-lg-block">Котеленець</span>
-              <span class="user__firstname d-lg-block">Володимир Анатолійович</span>
-            </h1>
-            <p class="user__position">старший майстер виробничого навчання</p>
-            <ul class="user__contacts list-unstyled mb-0">
-              <li><i class="fas fa-phone-square-alt"></i><a href="tel:+380552366026">(0552) 36 60 26</a></li>
-              <li><i class="fas fa-envelope-square"></i><a href="mailto:headmaster.hplztp@gmail.com">headmaster.hplztp@gmail.com</a></li>
+        <div class="row">
+          <div class="navigation col-12">
+            <ul class="navigation__list list-unstyled">
+              <li><label class="d-block mb-0" for="home-toggle"><i class="fas fa-home"></i><span>Головна</span></label></li>
+              <li><label class="d-block mb-0" for="teaching-toggle"><i class="fas fa-user-clock"></i><span>Виробниче навчання</span></label></li>
+              <li><label class="d-block mb-0" for="practice-toggle"><i class="fas fa-user-cog"></i><span>Виробнича практика</span></label></li>
+              <li><label class="d-block mb-0" for="internship-toggle"><i class="fas fa-user-shield"></i><span>Стажування</span></label></li>
+              <li><label class="d-block mb-0" for="safety-toggle"><i class="fas fa-user-secret"></i><span>Охорона праці</span></label></li>
             </ul>
           </div>
         </div>
       </div>
+    </nav>
+    <!-- /PAGE NAVIGATION -->
+    <!-- PAGE MAIN -->
+    <main class="page-main my-auto">
+      <section id="home">
+        <div class="container">
+          <div class="row">
+            <div class="my-photo col-10 offset-1 shadow--3d">
+              <img class="img-fluid" src="img/my-photo.jpg" alt="фото Котеленець Володимир Анатолійович">
+            </div>
+            <div class="user col-12">
+              <h2 class="mb-0">
+                <span class="user__lastname d-lg-block">Котеленець</span>
+                <span class="user__firstname d-lg-block">Володимир Анатолійович</span>
+              </h2>
+              <p class="user__position">старший майстер виробничого навчання</p>
+              <ul class="user__contacts list-unstyled mb-0">
+                <li><i class="fas fa-phone-square-alt"></i><a href="tel:+380552366026">(0552) 36 60 26</a></li>
+                <li><i class="fas fa-envelope-square"></i><a href="mailto:headmaster.hplztp@gmail.com">headmaster.hplztp@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- /PAGE MAIN -->
     <!-- PAGE FOOTER -->

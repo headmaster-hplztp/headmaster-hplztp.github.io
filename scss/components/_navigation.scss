@@ -1,0 +1,47 @@
+// NAVIGATION
+
+.navigation {
+  
+  &__list {
+    padding-bottom: 2 * $gutter;
+    margin-bottom: 0;
+    
+    li {
+      &:first-child {
+        border-top: 1px solid darken($bg-color, 10%);
+      }
+      &:last-child {
+        border-bottom: 1px solid lighten($bg-color, 10%);
+      }
+      label {
+        position: relative;
+        padding-left: 4 * $gutter;
+        border-top: 1px solid lighten($bg-color, 10%);
+        border-bottom: 1px solid darken($bg-color, 10%);
+        line-height: 3 * $gutter - 2px;
+        color: lighten($txt-color, 40%);
+        cursor: pointer;
+      }
+      .fas {
+        position: absolute;
+        left: $gutter;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+#home-toggle:checked ~ .page-navigation label[for="home-toggle"], 
+#teaching-toggle:checked ~ .page-navigation label[for="teaching-toggle"], 
+#practice-toggle:checked ~ .page-navigation label[for="practice-toggle"], 
+#internship-toggle:checked ~ .page-navigation label[for="internship-toggle"], 
+#safety-toggle:checked ~ .page-navigation label[for="safety-toggle"] {
+  background-color: darken($bg-color, 5%);
+  color: $txt-color;
+}
+
+#nav-toggle:checked ~ .page-navigation {
+  height: 0;
+  overflow: hidden;
+}
