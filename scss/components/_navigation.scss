@@ -1,102 +1,81 @@
 // NAVIGATION
 
-.navigation {
-  
-  &__list {
+.page-navigation {
+  ul {
+    padding-top: $gutter;
     padding-bottom: 2 * $gutter;
-    margin-bottom: 0;
     
-    li {
-      &:first-child {
-        border-top: 1px solid darken($bg-color, 10%);
-      }
-      &:last-child {
-        border-bottom: 1px solid lighten($bg-color, 10%);
-      }
-      label {
-        position: relative;
-        padding-left: 4 * $gutter;
-        border-top: 1px solid lighten($bg-color, 10%);
-        border-bottom: 1px solid darken($bg-color, 10%);
-        line-height: 3 * $gutter - 2px;
-        color: lighten($txt-color, 40%);
-        cursor: pointer;
-      }
-      .fas {
-        position: absolute;
-        left: $gutter;
-        @extend %positioning-middle;
-      }
+    @media (min-width: 768px) {
+      padding-top: 2 * $gutter;
     }
   }
-  
-  @media (min-width: 992px) {
+  li:not(:last-child) {
+    margin-bottom: $gutter;
+  }
+  label {
     position: relative;
+    padding-left: 4 * $gutter;
+    border-radius: $gutter;
+    background-color: $bg-color;
+    overflow: hidden;
     
-    &__list {
+    &::before {
+      content: "";
       position: absolute;
-      top: 0;
-      right: $gutter;
-      display: flex;
-      flex-direction: column;
+      top: 5px;
+      bottom: 5px;
+      left: 4 * $gutter - 1;
+      border-left: 1px solid $dark-shadow-color;
+      border-right: 1px solid $light-shadow-color;
+    }
+    i {
+      position: absolute;
+      width: 4 * $gutter;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    span {
+      margin-left: 1 * $gutter;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .page-navigation {
+    ul {
+      position: fixed;
+      top: 94px;
+      bottom: 80px;
+      right: -6 * $gutter;
       justify-content: center;
-      height: calc(100vh - 70px - 85px);
+      align-items: center;
+      margin: 0;
       padding: 0;
-      background-color: transparent;
-      
-      li {
-        &:not(:last-child) {
-          margin-bottom: $gutter;
-        }
-        &:first-child, &:last-child {
-          border: none;
-        }
+      &:hover {
         label {
-          width: 3 * $gutter;
-          height: 3 * $gutter;
-          padding-left: 0;
-          border: 1px solid darken($bg-color, 10%);
-          border-bottom-color: lighten($bg-color, 10%);
-          border-right-color: lighten($bg-color, 10%);
-          border-radius: 50%;
-          line-height: 1;
-          text-align: right;
-          
-          &:hover {
-            span {
-              width: auto;
-            }
-          }
-        }
-        .fas {
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-        span {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 4 * $gutter;
-          width: 0;
-          overflow: hidden;
+          overflow: visible;
         }
       }
     }
+    label {
+      width: 4 * $gutter;
+      height: 4 * $gutter;
+      border-radius: 50%;
+      overflow: hidden;
+      &::before {
+        display: none;
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5 * $gutter;
+        margin: 0;
+        line-height: 1.2;
+        text-align: right;
+      }
+    }
   }
-  
-}
-
-#home-toggle:checked ~ .page-navigation label[for="home-toggle"], 
-#teaching-toggle:checked ~ .page-navigation label[for="teaching-toggle"], 
-#practice-toggle:checked ~ .page-navigation label[for="practice-toggle"], 
-#internship-toggle:checked ~ .page-navigation label[for="internship-toggle"], 
-#safety-toggle:checked ~ .page-navigation label[for="safety-toggle"] {
-  background-color: darken($bg-color, 5%);
-  color: $txt-color;
-}
-
-#nav-toggle:checked ~ .page-navigation {
-  height: 0;
-  overflow: hidden;
 }

@@ -1,0 +1,57 @@
+// TOGGLE
+
+input#toggle {
+  
+  &-menu {
+    
+    &:not(:checked) ~ {
+      .page {
+        &-navigation {
+          height: 0;
+          overflow: hidden;
+        }
+      }
+    }
+    &:checked ~ {
+      .page {
+        &-header {
+          .menu-btn i {
+            color: $accent-color;
+          }
+        }
+        &-navigation {
+          height: auto;
+        }
+      }
+    }
+    
+  }
+  
+  &-home:checked ~ .page-navigation label[for="toggle-home"], 
+  &-teaching:checked ~ .page-navigation label[for="toggle-teaching"], 
+  &-practice:checked ~ .page-navigation label[for="toggle-practice"], 
+  &-internship:checked ~ .page-navigation label[for="toggle-internship"], 
+  &-safety:checked ~ .page-navigation label[for="toggle-safety"] {
+    color: $accent-color;
+    box-shadow: inset -5px -5px 15px $light-shadow-color, inset 5px 5px 15px $dark-shadow-color;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  input#toggle-menu:checked ~ .page-header .menu-btn {
+    color: $accent-color;
+  }
+}
+
+@media (min-width: 992px) {
+  input#toggle-menu:checked ~ .page-navigation ul {
+    right: calc((100vw - 960px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  input#toggle-menu:checked ~ .page-navigation ul {
+    right: calc((100vw - 1140px) / 2);
+  }
+}

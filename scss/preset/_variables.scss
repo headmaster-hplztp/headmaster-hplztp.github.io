@@ -2,15 +2,19 @@
 
 // Typo
 $plain-text-font-family: 'Open Sans', sans-serif;
-$plain-text-font-size: 18px !default;
+$plain-text-font-size: 16px !default;
+$plain-text-line-height: 20px !default;
 $plain-text-font-weight: 400 !default;
 
 $heading-text-font-family: 'Montserrat', sans-serif;
 $heading-text-font-weight: 400 !default;
 
 // Color
-$bg-color: #cccccc;
-$txt-color: #000000;
+$bg-color: #e9e9e9;
+$txt-color: #545454;
+$accent-color: #1e8dff;
+$dark-shadow-color: #bdbebd;
+$light-shadow-color: #ffffff;
 
 // Layout
 $gutter: 15px;

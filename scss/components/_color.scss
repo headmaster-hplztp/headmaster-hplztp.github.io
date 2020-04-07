@@ -5,25 +5,12 @@ body {
   color: $txt-color;
 }
 
-.user {
-  &__firstname, &__lastname {
-    color: lighten($txt-color, 0%);
-  }
-  &__position {
-    color: lighten($txt-color, 0%);
-  }
-  &__contacts {
-    a {
-      color: lighten($txt-color, 30%);
-      transition: color 0.3s linear;
-      
-      &:hover {
-        color: lighten($txt-color, 0%);
-        transition: color 0.3s linear;
-      }
-    }
-    .fas {
-      color: lighten($txt-color, 0%);
-    }
+a, .user__firstname, .user__lastname {
+  color: $accent-color;
+}
+
+@media (min-width: 768px) {
+  .menu-btn {
+    background: linear-gradient(106.7deg, rgba(255, 255, 255, 0) 10.94%, rgba(255, 255, 255, 0.6) 100%), $bg-color;
   }
 }
