@@ -7103,6 +7103,15 @@ h6 {
   font-size: 1.25rem;
 }
 
+a:hover {
+  color: #0a3153;
+}
+
+strong {
+  font-weight: 600;
+  font-style: italic;
+}
+
 .brand-logo {
   width: auto;
   height: 30px;
